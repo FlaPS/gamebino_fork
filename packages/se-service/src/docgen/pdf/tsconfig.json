@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "sourceMap": false,
+    "allowJs": true,
+    "outFile": "cliPDF.js"
+
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "files": ["makePDFRender.ts", "cliPDFRender.ts"]
+}

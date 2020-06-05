@@ -1,0 +1,30 @@
+{
+  "name": "se-mobile-front",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git"
+  },
+  "scripts": {
+    "start": "node ../../node_modules/webpack-dev-server/bin/webpack-dev-server.js  --config ./webpack.config/local.js --inline",
+    "dev": "node ../../node_modules/webpack/bin/webpack.js   --config ./webpack.config/dev.js --inline",
+    "stage": "node ../../node_modules/webpack/bin/webpack.js   --config ./webpack.config/stage.js --inline",
+    "build": "node ../../node_modules/webpack/bin/webpack.js --config ./webpack.config/prod.js",
+    "storybook": "start-storybook -p 6006",
+    "convert-tilda-images": "ts-node-dev  --transpileOnly -- ./converTildaImages.ts",
+    "test": "jest",
+    "build-storybook": "build-storybook",
+    "sw:build": "tsc -p ./src/serviceWorker/"
+  },
+  "engines": {
+    "node": "=10.6.0",
+    "npm": ">=5.6.0"
+  },
+  "dependencies": {
+    "@sha/fsa": "0.1.0",
+    "@sha/random": "0.1.0",
+    "@sha/react-fp": "0.1.0",
+    "@sha/router": "0.0.1",
+    "@sha/utils": "0.1.0",
+    "se-iso": "0.0.0"
+  }
+}

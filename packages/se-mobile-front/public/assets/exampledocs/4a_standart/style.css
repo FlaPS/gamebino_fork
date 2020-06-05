@@ -1,0 +1,595 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Rubik:400,700&display=swap);
+
+@page { margin: 0 }
+body { margin: 0 }
+.sheet {
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+  page-break-after: always;
+}
+
+body .service {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 8pt;
+}
+body .trainer {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 8pt;
+}
+
+
+/** Paper sizes **/
+body .A3                { width: 297mm; height: 419mm }
+body .A3.landscape      { width: 420mm; height: 296mm }
+body .A4                { width: 210mm; height: 296mm }
+body .A4.landscape      { width: 297mm; height: 209mm }
+body .A5                { width: 148mm; height: 209mm }
+body .A5.landscape      { width: 210mm; height: 147mm }
+body .letter            { width: 216mm; height: 279mm }
+body .letter.landscape  { width: 280mm; height: 215mm }
+body .legal             { width: 216mm; height: 356mm }
+body .legal.landscape   { width: 357mm; height: 215mm }
+
+/** Padding area **/
+.sheet.padding-0mm { padding: 0mm }
+.sheet.padding-10mm { padding: 10mm }
+.sheet.padding-15mm { padding: 15mm }
+.sheet.padding-20mm { padding: 20mm }
+.sheet.padding-25mm { padding: 25mm }
+
+/** For screen preview **/
+@media screen {
+  body { background: #e0e0e0 }
+  .sheet {
+    background: white;
+    box-shadow: 0 .5mm 2mm rgba(0,0,0,.3);
+    margin: 5mm auto;
+  }
+}
+
+/** Fix for Chrome issue #273306 **/
+@media print {
+  body .A3.landscape { width: 420mm }
+  body .A3, body .A4.landscape { width: 297mm }
+  body .A4, body .A5.landscape { width: 210mm }
+  body .A5                    { width: 148mm }
+  body .letter, body .legal    { width: 216mm }
+  body .letter.landscape      { width: 280mm }
+  body .legal.landscape       { width: 357mm }
+}
+
+
+
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+h3 {
+  text-transform: uppercase;
+}
+
+body .bg {
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size:100%;
+}
+/*
+body .service.bg1 {
+  background-image:url(menu/service_vbg1.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size:100%;
+}
+body .service.bg2  {
+  background-image:url(menu/service_vbg2.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size:100%;
+}
+body .service.bg3  {
+  background-image:url(menu/service_vbg3.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size:100%;
+}
+body .service.bg4  {
+  background-image:url(menu/service_vbg4.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size:100%;
+}
+body .service.bg5  {
+  background-image:url(menu/service_vbg5.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size:100%;
+}
+body .landscape.bg1  {
+  background-image:url(menu/hbg1.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size:100%;
+}
+body .landscape.bg2  {
+  background-image:url(menu/hbg2.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size:100%;
+}
+body .trainer.bg1 {
+  background-image:url(menu/trainer_vbg1.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size:100%;
+}
+body .trainer.bg2 {
+  background-image:url(menu/trainer_vbg2.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size:100%;
+}
+
+*/
+table {
+  width:100%;
+  padding:0;
+  border-collapse: collapse;
+  border: 0;
+  vertical-align: top;
+}
+table th {
+  text-transform: uppercase;
+  font-weight:normal;
+  opacity:0.8;
+  padding: 2mm 0 2mm 2mm;
+}
+.service.zebra .odd {
+  background:#F2F7EC;
+}
+.service.zebra .even {
+  background:#E1EFC6;
+}
+
+
+.plan .general th {
+  padding: 1mm;
+}
+
+.meal_type_wrapper {
+  position: relative;
+  width: 5mm;
+}
+.meal_type p {
+  position: absolute;
+  transform: rotate(-90deg);
+  line-height: 8pt;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: normal;
+  opacity: 0.8;
+  white-space: nowrap;
+  left: -4mm;
+  right: 0;
+}
+
+.plan_scheet {
+  margin: 5mm;
+}
+.landscape .plan_meta {
+  display: flex;
+  align-items: center;
+}
+.plan_meta {
+  margin:5mm;
+}
+.service .plan_meta {
+  margin: 5mm 5mm 0 5mm;
+}
+
+.plan_meta .service_logo {
+  margin-bottom: 5mm;
+}
+
+.plan_meta .service_logo img {
+  /*width: 50px;*/
+  /*height: 50px;*/
+  height: 40px;
+}
+
+
+
+.plan_meta div {
+  padding: 0 5mm 0 0;
+}
+
+.blackline .vbordered td.odd,
+.blackline .vbordered td.even {
+  border-right: 1px solid #000;
+}
+.whiteline .vbordered th,
+.whiteline .vbordered td.odd,
+.whiteline .vbordered td.even {
+  border-right: 1px solid #fff;
+}
+
+
+.vbordered th:last-child,
+.vbordered td.odd:last-child,
+.vbordered td.even:last-child {
+  border: 0;
+}
+.plan .vbordered th:first-child {
+  border: 0;
+}
+
+.blackline .hbordered td.odd,
+.blackline .hbordered td.even,
+.blackline .hbordered td.odd:last-child,
+.blackline .hbordered td.even:last-child  {
+  border-bottom: 1px solid #000;
+}
+.whiteline .hbordered td.odd,
+.whiteline .hbordered td.even,
+.whiteline .hbordered td.odd:last-child,
+.whiteline .hbordered td.even:last-child  {
+  border-bottom: 1px solid #fff;
+}
+
+.whiteline .hbordered tr:last-child td:last-child,
+.whiteline .hbordered tr:last-child td,
+.blackline .hbordered tr:last-child td:last-child,
+.blackline .hbordered tr:last-child td {
+  border-bottom: 0;
+}
+.meal {
+  vertical-align: top;
+  padding: 2mm 1mm;
+}
+.trainer .meal {
+  padding: 6px 7px;
+  width: 90px;
+}
+.service .meal {
+  padding: 6px 7px;
+  width: 90px;
+}
+
+
+.landscape .meal {
+  padding: 1mm 1mm;
+}
+
+.list td.odd,
+.list td.even {
+  width: 20%;
+  padding:2mm;
+  vertical-align:top;
+}
+
+.list th:first-child,
+.list td.odd:first-child {
+  padding-left: 0;
+}
+.list th {
+  padding:0 5mm;
+}
+.service.list .plan_scheet {
+
+}
+.meal_title {
+  font-weight:bold;
+  line-height:8pt;
+  padding-bottom:1mm;
+}
+
+.plan_person {
+  font-size:10pt;
+  margin-top: 2mm;
+  margin-bottom: 5mm;
+}
+.plan_week {
+  font-size:25pt;
+  font-weight: bold;
+  white-space: nowrap;
+}
+.footer {
+  margin: 5mm 0 3px 0;
+  position: absolute;
+  bottom: 0;
+  left: 5mm;
+  right: 5mm;
+  top: auto;
+}
+.footer table td {
+  width: 33%;
+  vertical-align: middle;
+}
+.aleft {
+  text-align:left;
+}
+.acenter {
+  text-align:center;
+}
+.aright {
+  text-align:right;
+  white-space: nowrap;
+}
+
+
+.phone {
+  background: url(phone.svg);
+  background-size: 10px;
+  background-repeat: no-repeat;
+  background-position: 2px center;
+  line-height: 15px;
+  padding: 10px 10px 10px 25px;
+  white-space: nowrap;
+}
+.website {
+  background: url(web.svg);
+  background-size: 15px;
+  background-repeat: no-repeat;
+  background-position: 0px center;
+  line-height: 15px;
+  padding: 2px 10px 2px 25px;
+  white-space: nowrap;
+}
+.instagram {
+  background: url(instagram.svg);
+  background-size: 15px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  line-height: 15px;
+  padding: 10px 0 10px 25px;
+}
+.service_cover_contacts {
+  margin: 10mm;
+  font-size: 16px;
+}
+.trainer_info .phone {
+  padding: 5px 0 5px 25px;
+}
+.trainer_info .website {
+  padding: 5px 0 5px 25px;
+}
+.trainer_info .instagram {
+  padding: 5px 0 5px 25px;
+}
+.trainer_info a {
+  font-size: 14px;
+}
+
+.smarteat  {
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  line-height: 34px;
+  padding: 10px 0 10px 0px;
+}
+.kbgu {
+  margin-top: 1mm;
+  width: 60mm;
+}
+.kbgu td,
+.kbgu th {
+  text-align: left;
+  width: 25%;
+  padding: 0;
+}
+.kbgu td {
+  opacity: 0.6;
+}
+.kbgu th {
+  font-size: 15pt;
+  opacity: 1;
+  font-weight: bold;
+}
+.list .meal {
+  width: 20%;
+  vertical-align: top;
+}
+
+.cook_info {
+  font-size:11pt;
+}
+
+.meals_list .general td {
+  vertical-align: top;
+  width: 20%;
+  padding: 0.5mm 1mm;
+}
+
+.plan .meal_list td {
+  padding: 0mm 0;
+  vertical-align: bottom;
+}
+.meals_list .list td {
+  padding: 0.5mm 0;
+}
+.rec td {
+  width: 50%;
+  padding: 0 10mm 0 0px;
+  vertical-align: top;
+}
+.one_manual {
+  margin-bottom: 7mm;
+}
+
+.service.plan .plan_scheet {
+  margin-top: 5mm;
+}
+.service.list .plan_scheet {
+  margin-top: 25mm;
+}
+
+
+/* trainer section */
+.plan_trainer_meta {
+  display: flex;
+  justify-content: space-between;
+}
+.trainer_meta {
+  display: flex;
+  align-items: center;
+  margin: 5mm;
+  align-items: start;
+}
+
+.trainer_name {
+  font-weight: bold;
+  font-size: 10pt;
+  margin: 0 0 2mm 0;
+}
+.trainer_avatar {
+  width: 80px;
+  height: 80px;
+  margin-right: 5mm;
+}
+.trainer_avatar img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+}
+
+.trainer.zebra .odd {
+  background: #F3F5F7;
+}
+
+.trainer.zebra .even {
+  background: #D3D5D2;
+}
+
+.trainer.plan .plan_scheet {
+  margin-top: 12mm;
+}
+.trainer.list .plan_scheet {
+  margin-top: 50mm;
+}
+.trainer.rec .plan_scheet {
+  margin-top: 50mm;
+}
+
+
+
+/* cover trainer */
+.cover1 {
+  background-image:url(menu/cover1.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size:100%;
+}
+.cover2 {
+  background-image:url(menu/cover2.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size:100%;
+}
+.cover5 {
+  background-image:url(menu/cover5.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size:100%;
+}
+
+.cover {
+  position: relative;
+}
+.cover_trainer_meta {
+  position: absolute;
+  top: 10mm;
+  right: 10mm;
+}
+.cover_plan_meta {
+  position: absolute;
+  bottom: 10mm;
+  right: 10mm;
+}
+
+.trainer .cover_plan_meta_new {
+  position: absolute;
+  bottom: 10mm;
+  left: 10mm;
+}
+
+.trainer .cover_plan_meta_new .plan_person h1 {
+  font-size: 77px;
+  line-height: 60px;
+}
+.trainer .cover_plan_meta_new .plan_person h2 {
+  font-size: 24px;
+  font-weight: normal;
+}
+
+
+/* cover service */
+.cover .service_logo {
+  margin: 10mm;
+}
+.cover .service_logo img {
+  /*width: 100px;*/
+  /*height: 100px;*/
+  height: 80px;
+}
+.cover3 {
+  background-image:url(menu/cover3.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size:100%;
+}
+.cover4 {
+  background-image:url(menu/cover4.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size:100%;
+}
+.service .cover_plan_meta {
+  position: absolute;
+  bottom: 10mm;
+  left: 10mm;
+}
+.service .cover_plan_meta_new {
+  position: absolute;
+  bottom: 10mm;
+  left: 10mm;
+}
+
+.service .cover_plan_meta_new .plan_person h1 {
+  font-size: 77px;
+  line-height: 60px;
+}
+.service .cover_plan_meta_new .plan_person h2 {
+  font-size: 24px;
+  font-weight: normal;
+}
+
+
+/* demo */
+
+.demo .plan_scheet table td.meal:nth-child(2) .meal_title,
+.demo .plan_scheet table td.meal:nth-child(2) .meal_list {
+  filter: none;
+}
+.demo .plan_scheet table td.meal .meal_title,
+.demo .plan_scheet table td.meal .meal_list {
+  color: rgba(0,0,0,0);
+}
+.demo .plan_scheet {
+  position: relative;
+}
+.demo .demooverlay {
+  position: absolute;
+  width: 167mm;
+  height: calc(100% - 4mm);
+  background: #fff;
+  left: 33mm;
+  top: 4mm;
+  z-index: 999;
+  opacity: 0.8;
+}
+
+.blur {
+   color: rgba(0,0,0,0);
+}

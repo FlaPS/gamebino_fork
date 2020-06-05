@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "noEmitOnError": false,
+    "removeComments": true,
+    "sourceMap": false,
+    "target": "esnext",
+    "lib": [
+      "es2015",
+      "webworker"
+    ],
+    "outFile": "../../public/sw.js",
+    "types": [],
+    "moduleResolution": "node",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "module": "system"
+
+  },
+  "compileOnSave": true,
+  "skipLibCheck": true,
+  "exclude": [
+    "node_modules",
+    "functions"
+  ],
+
+  "include": [
+    "./*.ts",
+    "*/*.tsx"
+  ]
+}

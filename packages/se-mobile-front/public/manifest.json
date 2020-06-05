@@ -1,0 +1,13 @@
+{
+  "name": "Occasionally Frustrated",
+  "short_name": "Occasionally Frustrated",
+  "icons": [
+    {
+      "src": "assets/ui/mainLogo.png",
+      "sizes": "2013x2013",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone"
+}

@@ -1,0 +1,22 @@
+ErrorDocument 403 /404.html
+ErrorDocument 404 /404.html
+
+DirectoryIndex page5370475.html
+
+RewriteEngine On
+
+RewriteCond %{HTTP:X-Scheme} =http
+RewriteRule ^(.*)$ https://www\.smart-eat\.ru/$1 [R=301,L]
+
+RewriteCond %{HTTP:X-Scheme} =https
+RewriteCond %{HTTP_HOST} ^smart-eat.ru [NC]
+RewriteRule ^(.*)$ https://www\.smart-eat\.ru/$1 [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} /robots.txt
+RewriteCond "%{DOCUMENT_ROOT}/robots_%{HTTP_HOST}.txt" -f
+RewriteRule ^(.*)$ robots_%{HTTP_HOST}.txt [NC,L]
+RewriteRule ^fitness$ page5564004.html [NC]
+RewriteRule ^fitness/$ page5564004.html [NC]
+
+RewriteRule ^favicon.ico$ https://static.tildacdn.com/tild6632-6330-4630-b533-386564353139/favicon_2.ico [R=302,L]
+

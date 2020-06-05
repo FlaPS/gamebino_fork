@@ -1,0 +1,7 @@
+{
+    "prev": "mongodb://localhost/smart-eat",
+    "next": "mongodb://localhost/smart-eat",
+    "migrationsDir": "./",
+    "es6": false,
+    "typescript": true
+  }
